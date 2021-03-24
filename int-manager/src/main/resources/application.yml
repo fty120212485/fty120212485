@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active: @profiles.active@
+server:
+  port: 8081
+
+jwt:
+  header: Adminstrator
+  expiration: 604800 #604800 60*60*24*7 一周
+  head: 'Bearer '
+  secret:
+    private: secret_private
+    public: secret_public
+
+mybatis:
+  mapper-locations:
+    - classpath*:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+
+security:
+  ignored:
+    urls:
+      - /swagger-ui/**
+      - /swagger-resources/**
+      - /v3/api-docs
+      - /back/manager/login
+      - /back/manager/logout
+      - /back/manager/info
+      - /**/*.js
+      - /**/*.css
+      - /**/*.png
+      - /**/*.ico

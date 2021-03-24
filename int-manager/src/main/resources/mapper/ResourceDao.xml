@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yung.interview.dao.ResourceDao">
+    <insert id="batchInsert">
+        INSERT INTO
+            resource(name, url, status, category_id, create_time, update_time)
+        values
+        <foreach collection="resourceList" item="resource" separator="," >
+            (#{resource.name}, #{resource.url}, #{resource.status}, #{resource.categoryId}, now(), now())
+        </foreach>
+    </insert>
+
+    <update id="changeStatus">
+        update resource
+            set status = #{newStatus}, update_time = now()
+        where id = #{resourceId}
+    </update>
+</mapper>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/int-common/int-common.iml" filepath="$PROJECT_DIR$/int-common/int-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/int-manager/int-manager.iml" filepath="$PROJECT_DIR$/int-manager/int-manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/int-mbg/int-mbg.iml" filepath="$PROJECT_DIR$/int-mbg/int-mbg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/int-security/int-security.iml" filepath="$PROJECT_DIR$/int-security/int-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/interview.iml" filepath="$PROJECT_DIR$/interview.iml" />
+    </modules>
+  </component>
+</project>

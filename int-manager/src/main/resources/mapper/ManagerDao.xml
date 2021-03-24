@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yung.interview.dao.ManagerDao">
+    <delete id="unbindRole">
+        DELETE
+        FROM manager_role
+        WHERE manager_id = #{managerId} and
+        role_id in
+        <foreach collection="roleIds" item="roleId" open="(" separator="," close=")">
+            #{roleId}
+        </foreach>
+    </delete>
+
+    <insert id="bindRole">
+        INSERT INTO
+        manager_role(manager_id, role_id)
+        values
+        <foreach collection="roleIds" item="roleId" separator="," >
+            (#{managerId}, #{roleId})
+        </foreach>
+    </insert>
+</mapper>
