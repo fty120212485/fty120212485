@@ -1,12 +1,12 @@
 spring:
   datasource:
     druid:
-      url: jdbc:mysql://127.0.0.1:3306/interview?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+      url: jdbc:mysql://47.107.127.208:3306/interview?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
       username: root
       password: root
 
   redis:
-    host: 127.0.0.1 # Redis服务器地址
+    host: 47.107.127.208 # Redis服务器地址
     database: 0 # # Redis数据库索引（默认为0）
     port: 6379 # Redis服务器连接端口
     password: 123456 # Redis服务器连接密码（默认为空）
@@ -17,7 +17,7 @@ aliyun:
     accessKeySecret: 
     endpoint: oss-cn-shenzhen.aliyuncs.com
     bucket-name: fty-oos.oss-cn-shenzhen.aliyuncs.com
-    callbackUrl: http://127.0.0.1:8080
+    callbackUrl: http://47.107.127.208:8081
     expireTime: 30
     dir-prefix: interview/
 
